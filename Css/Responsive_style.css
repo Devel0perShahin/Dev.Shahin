@@ -1,0 +1,258 @@
+/* =========================== */
+/* REUSEABLE COMPONENT AND COLOR VARIABLE */
+:root {
+  --Dark: #3b4443;
+  --Light: #f0f2f2;
+}
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 58%;
+  }
+  Section#About_me .Container .About_txt {
+    margin-top: 0;
+  }
+  Section#Highlight .Rows .Col_txt {
+    padding: 2rem 4rem;
+  }
+  Section#Highlight .Rows .Col_txt .Highlight_btn {
+    margin-top: 0rem;
+  }
+  Section#Highlight .Rows .Col_txt p {
+    margin: 1.5rem 0;
+  }
+  Section#Portfolio {
+    min-height: 110rem;
+  }
+  Section .Container {
+    /* padding: 5rem 0; */
+    margin-top: -12rem;
+  }
+  Section#Portfolio .Cols .Col {
+    width: calc(100% / 3 - 0.5rem);
+  }
+  Section#Packages {
+    min-height: 85.3rem;
+  }
+  Section#Packages .Cols {
+    padding-top: -2rem;
+  }
+  Section#Packages .Cols .Col {
+    margin-top: 2rem;
+  }
+  /* Section#Services {
+    min-height: 170rem;
+  } */
+}
+@media only screen and (max-width: 885px) {
+  html {
+    font-size: 53%;
+  }
+  Section#Nav .Hembarger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--Dark);
+    cursor: pointer;
+  }
+  Section#Nav .Hembarger span {
+    height: 0.2rem;
+    width: 2.5rem;
+    margin-top: 0.3rem;
+    background-color: var(--Light);
+    transition: all 0.3s ease;
+  }
+  Section#Nav .Hembarger span:nth-child(1) {
+    margin-top: 0rem;
+  }
+  Section#Nav nav ui.Nav_items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.89);
+    z-index: 8;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    border-radius: 0rem 0rem 0rem 100rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  Section#Nav nav ui.Nav_items li {
+    margin-top: 1.5rem;
+    margin-left: -2rem;
+  }
+  Section#Nav nav ui.Nav_items li a{
+    font-size: 2.5rem;
+  }
+  Section#Nav nav ui.Nav_items li a::after{
+    background: var(--Light);
+  }
+  Section#Nav nav ui.Nav_items.Active {
+    opacity: 1;
+    pointer-events: auto;
+    height: 100vh;
+    width: 100%;
+    border-radius: 0rem 0rem 0rem 0rem;
+    overflow: hidden;
+  }
+  Section#Nav .Hembarger {
+    position: fixed;
+    right: 2rem;
+    z-index: 99999999;
+  }
+  Section#Nav .Hembarger.Active span {
+    margin: 0;
+    transform-origin: center;
+  }
+  Section#Nav .Hembarger.Active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  Section#Nav .Hembarger.Active span:nth-child(2) {
+    height: 0;
+    opacity: 0;
+  }
+  Section#Nav .Hembarger.Active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  Section#Nav .logo {
+    position: fixed;
+    left: 2rem;
+    z-index: 99999999;
+  }
+
+  Section#About_me {
+    height: 110rem;
+  }
+  Section#About_me .Container {
+    margin-top: -15rem;
+  }
+  Section#About_me .Container .Photo {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  Section#About_me .Container .About_txt {
+    width: 100%;
+  }
+  Section#Highlight .Rows .Col_txt {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  Section#Highlight {
+    height: 180rem;
+  }
+  Section#Highlight .Container {
+    margin-top: -10rem;
+  }
+  Section#Highlight .Rows .Col_video {
+    width: 100%;
+  }
+  Section#Highlight .Rows .Row_midle .Col_video {
+    order: 0;
+  }
+  /* Section#Portfolio {
+    min-height: 190rem;
+  } */
+  Section#Portfolio .Container {
+    margin-top: -5rem;
+  }
+  Section#Portfolio .Cols .Col {
+    width: calc(100% / 2 - 0.5rem);
+  }
+  Section#Services {
+    min-height: 175rem;
+  }
+  Section#Services .Container {
+    margin-top: -5rem;
+  }
+  Section#Services .Col {
+    width: calc(100% / 2 - 1rem);
+  }
+  Section#Packages {
+    min-height: 130.3rem;
+  }
+  Section#Packages .Container {
+    margin-top: -2rem;
+  }
+  Section#Packages .Cols .Col {
+    width: calc(100% / 2 - 1rem);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+  .Cols .Col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  section#About_me {
+    height: 95rem;
+  }
+  section#About_me .Container {
+    margin-top: -10rem;
+  }
+  section#About_me .Cols .Photo.Col {
+    width: 70% !important;
+    margin-bottom: 4rem;
+  }
+  Section#Portfolio .Container {
+    margin-top: -10rem;
+  }
+  Section#Portfolio {
+    min-height: 380rem;
+  }
+  Section#Services {
+    min-height: 235rem;
+  }
+  Section#Services .Cols {
+    padding: 2rem 0;
+    align-items: center;
+  }
+  Section#Services .Cols .Col {
+    aspect-ratio: 0;
+  }
+  Section#Packages {
+    min-height: 175.3rem;
+  }
+  Section#Contact .Col {
+    height: unset;
+  }
+  Section#Contact .Txt_side {
+    padding: 5rem 0;
+  }
+  Section#Contact .Txt_side h2 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+  section#Hero{
+    padding-top: 18rem;
+  }
+  section#Hero .Btn.Hero_btn {
+    bottom: 25vh;
+  }
+  Section#Services {
+    min-height: 265rem;
+  }
+  Section#Highlight .Container {
+    margin-top: -3rem;
+  }
+  Section#Highlight {
+    height: 180rem;
+  }
+}
