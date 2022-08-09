@@ -28,9 +28,6 @@ function Sticky_nav_Btn_change() {
         let Hiro_btn = document.querySelector(".Hero_btn");
         let Hero_height = document.querySelector("section#Hero").scrollHeight;
         let Body_height = document.querySelector("body").scrollHeight - (window.innerHeight);
-
-        console.log("Body height is " + (Body_height))
-        console.log("Scroll Y:-  " + window.scrollY)
         if (window.scrollY >= Nav.scrollHeight) {
             Nav.classList.add("Pre_active");
             // console.log(Nav.scrollHeight)
@@ -125,3 +122,36 @@ function Auto_detect_iframes_hei() {
 
 }
 Auto_detect_iframes_hei();
+
+//AUTO DECECT AREA
+window.addEventListener("scroll", function () {
+
+    let Top = window.scrollY;
+
+    function Active_area(ST_area, EN_area, Active_li) {
+
+        if (Top >= ST_area & Top < EN_area) {
+            Active_li.classList.add("Active");
+            console.log("function is colled")
+        } else {
+            Active_li.classList.remove("Active");
+        }
+    }
+
+    let List_items = document.querySelectorAll("nav li a");
+    let About = document.querySelector("#About_me").offsetTop - 200;
+    let Highlight = document.querySelector("#Highlight").offsetTop - 200;
+    let Portfolio = document.querySelector("#Portfolio").offsetTop - 200;
+    let Services = document.querySelector("#Services").offsetTop - 200;
+    let Packages = document.querySelector("#Packages").offsetTop - 200;
+    let Contact = document.querySelector("#Contact").offsetTop - 200;
+    let Footer = document.querySelector("#Footer").offsetTop;
+
+    // CALLING "ACTIVE AREA" FUNCTIONS
+    Active_area(About, Highlight, List_items[0]);
+    Active_area(Highlight, Portfolio, List_items[1]);
+    Active_area(Portfolio, Services, List_items[2]);
+    Active_area(Services, Packages, List_items[3]);
+    Active_area(Packages, Contact, List_items[4]);
+    Active_area(Contact, Footer, List_items[5]);
+});
