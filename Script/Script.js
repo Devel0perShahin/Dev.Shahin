@@ -100,28 +100,29 @@ Hembarger_click()
 
 function Auto_detect_iframes_hei() {
     let Portfolio = document.querySelector("#Portfolio")
-    let Iframe_hei = document.querySelectorAll("#Portfolio iframe")[0].scrollHeight;
-    // console.log(Iframe_hei)
-    if (window.innerWidth < 1150) {
-        if (window.innerWidth >= 885) {
-            Portfolio.style.cssText = `min-height:${Iframe_hei * 2 + 400}px;`;
-            console.log("this is two")
-        }
-        if (window.innerWidth < 885 & window.innerWidth >= 600) {
-            Portfolio.style.cssText = `min-height:${Iframe_hei * 3 + 400}px;`;
-            console.log("this is three")
-        }
-        if (window.innerWidth < 600) {
-            Portfolio.style.cssText = `min-height:${Iframe_hei * 6 + 400}px;`;
-            console.log("this is six")
-        }
-    } else {
-        Portfolio.style.cssText = `min-height:${Iframe_hei * 2 + 450}px;`;
-        console.log("this is two")
-    };
+    let Cols_hei = document.querySelector("#Portfolio .Cols").scrollHeight;
 
+    Portfolio.style.cssText = `min-height:${Cols_hei + 350}px;`;
 }
 Auto_detect_iframes_hei();
+
+function Auto_detect_Services_hei() {
+    let Services_area = document.querySelector("#Services");
+    let Cols_hei = document.querySelector("#Services .Cols").scrollHeight;
+    // console.log(Cols_hei);
+    Services_area.style.cssText = `min-height:${Cols_hei + 250}px;`;
+
+}
+Auto_detect_Services_hei()
+
+function Auto_detect_Highlight_hei() {
+    let Highlight_area = document.querySelector("#Highlight");
+    let Rows_hei = document.querySelector("#Highlight .Rows").scrollHeight;
+    // console.log(Cols_hei);
+    Highlight_area.style.cssText = `min-height:${Rows_hei + 250}px;`;
+
+}
+Auto_detect_Highlight_hei()
 
 //AUTO DECECT AREA
 window.addEventListener("scroll", function () {
@@ -132,7 +133,6 @@ window.addEventListener("scroll", function () {
 
         if (Top >= ST_area & Top < EN_area) {
             Active_li.classList.add("Active");
-            console.log("function is colled")
         } else {
             Active_li.classList.remove("Active");
         }
